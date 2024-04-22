@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav {
+    background-color: #405D9B;
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+}
+
+.right {
+    flex-basis: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 40%; */
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.right input{
+    padding: 5px;
+}
+
+.email1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.email1 label{
+    margin-bottom: 5px;
+}
+.password {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.password input {
+    margin-top: 2px;
+}
+
+.password p {
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+
+.password label {
+    margin-bottom: 5px;
+}
+
+.right button {
+    background-color: #4267B2;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: 600;
+    border: 1px solid #444;
+    
+}
+
+.content {
+    background: linear-gradient(#E8EAF3,#F9FAFB);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+.part1 {
+    flex-basis: 47%;
+}
+.part1 h2 {
+    font-weight: 600;
+    font-size: 30px;
+}
+.part1 img{
+    min-width: 100%;
+    margin: 25px;
+}
+
+.part2 {
+    flex-basis: 45%;
+}
+.part2 h1 {
+    font-size: 2.5em;
+}
+.part2 h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+form .name {
+    display: flex;
+    gap: 10px;
+    
+}
+
+form input {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #C5CEDD;
+    
+}
+
+form .email {
+    width: 54%;
+}
+
+.email {
+    margin-top: 20px;
+}
+.birthday {
+    margin-top: 20px;
+    position: relative;
+}
+.birthday h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+}
+
+.question p {
+    font-size: 13px;
+    color: #4267B2;
+    position: absolute;
+    top: 39%;
+    left: 20%;
+    width: 25%;
+    line-height: 18px;
+}
+
+#password {
+    position: relative;
+}
+
+#showPassword {
+    position: absolute !important;
+    top: 51%;
+    right: 23%;
+    transform: translateY(-46%);
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+#hidePassword {
+    position: absolute !important;
+    top: 51%;
+    right: 23%;
+    transform: translateY(-46%);
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+.gender {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #444;
+    padding-left: 5px;
+}
+
+.terms {
+    font-size: 10px;
+    color: #666;
+    width: 43%;
+    line-height: 14px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.terms span {
+    color: #4267B2;
+}
+
+#signup {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #3AAF3C;
+    width: 27%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    /* border: 1px solid #666; */
+    border-radius: 5px;
+    margin-top: 25px;
+    border-inline: 1px solid #666;
+}
+
+form .fa-eye {
+    display: none;
+}
+
+.popup {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    transition: 0.2s ease top;
+}
+
+.popup img {
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+}
+.popup h3 {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.popup button {
+    /* width: 100%; */
+    padding: 8px 60px;
+    background-color: #405D9B;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #444;
+    margin-top: 50px;
+    border-radius: inherit;
+}

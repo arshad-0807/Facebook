@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Facebook</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            <div class="logo">
+                <h2>facebook</h2>
+            </div>
+        </div>
+        <div class="right">
+            <div class="email1">
+                <label for="email">Email or Phone</label>
+                <input type="email number" placeholder="Username" required>
+            </div>
+            <div class="password">
+                <label for="">Password</label>
+                <input type="password" placeholder="Password" required>
+                <p>Forgotten Password?</p>
+            </div>
+            <button>Log In</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="part1">
+            <h2>Facebook helps you connect and share with the people in your life.</h2>
+            <img src="images/facebook-Photoroom.png-Photoroom.png" alt="">
+        </div>
+        <div class="part2">
+            <h1>Create an account</h1>
+            <h3>It's free and always will be.</h3>
+            <form action="" method="get">
+                <div class="name">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <input type="email number" placeholder="Mobile Number or Email Adress" required class="email">
+                <input type="password" id="password" placeholder="Password" required class="email">
+                <i class="fa-solid fa-eye-slash" id="showPassword"></i>
+                <i class="fa-solid fa-eye" id="hidePassword"></i>
+                <div class="birthday">
+                    <label for="date">
+                        <h4>Birthday</h4>
+                    </label>
+                    <input type="date" id="date" name="date" value="1998-08-18" required>
+                    <div class="question">
+                        <p>Why do I need to provide my date of birth?</p>
+                    </div>
+                </div>
+                <div class="gender">
+                    <div>
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="Male">
+                        <label for="male">Male</label>
+                    </div>
+                </div>
+                <div class="terms">
+                    <p>By clicking Sign Up, you agree to our <span>Terms, Privacy Policy</span> and <span>Cookies
+                            Policy</span>. You may receive SMS notifications from us and can opt out at any time.</p>
+                </div>
+            </form>
+            <button id="signup" onclick="showPopup()">Sign Up</button>
+        </div>
+        <div class="popup">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/checkmark-cross/done-icon.png" alt="">
+            <h3>Account Created Successfully</h3>
+            <button id="login" onclick="hidePopup()">Log In</button>
+        </div>
+    </div>
+
+
+<script>
+    var showPassword = document.getElementById("showPassword");
+    var hidePassword = document.getElementById("hidePassword");
+    var passwordInput = document.getElementById("password");
+
+    showPassword.addEventListener("click", function() {
+        if (passwordInput.type === "password"){
+            passwordInput.type = "text";
+            showPassword.style.display = "none";
+            hidePassword.style.display = "block";
+        }
+        else {
+            passwordInput.type = "password";
+            hidePassword.style.display = "none";
+            showPassword.style.display = "block";
+        }
+    });
+
+    hidePassword.addEventListener("click",function() {
+        showPassword.click();
+    });
+    
+
+    var signUp =  document.getElementById("signup");
+    var popup = document.querySelector(".popup");
+    var login = document.getElementById("login")
+
+    function showPopup() {
+        popup.style.visibility = "visible";
+        popup.style.top = "50%"
+        popup.style.transform = "translate(-50%,-50%) scale(1)";
+    }
+    
+    signUp.addEventListener("click",function(){
+         showPopup() 
+    });
+
+    function hidePopup() {
+        popup.style.visibility = "hidden";
+        popup.style.top = "0"
+        popup.style.transform = "translate(-50%,-50%) scale(0.2)"
+    }
+
+    login.addEventListener("click", function() {
+        hidePassword()
+    });
+
+
+
+</script>
+
+
+</body>
+
+</html>
